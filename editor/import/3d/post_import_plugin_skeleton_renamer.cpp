@@ -139,7 +139,7 @@ void PostImportPluginSkeletonRenamer::_internal_process(InternalImportCategory p
 	}
 }
 
-void PostImportPluginSkeletonRenamer::internal_process(InternalImportCategory p_category, Node *p_base_scene, Node *p_node, Ref<Resource> p_resource, const Dictionary &p_options) {
+void PostImportPluginSkeletonRenamer::internal_process(InternalImportCategory p_category, Node *p_base_scene, Node *p_node, Ref<Resource> p_resource, const Dictionary &p_options, const String &p_source_file) {
 	if (p_category == INTERNAL_IMPORT_CATEGORY_SKELETON_3D_NODE) {
 		// Prepare objects.
 		Object *map = p_options["retarget/bone_map"].get_validated_object();
